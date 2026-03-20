@@ -1,116 +1,105 @@
-   *{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-   }  
-   nav{
-    background-color: #222222;
-    height: 80px;
-    width: 100%;
-   }
-   label .logo{
-    color: #03EAF2;
-    font-size: 35px;
-    line-height: 80px;
-    padding: 0 100px;
-    font-weight: bold;
-   }
-   nav ul{
-    float: right;
-    margin-right: 20px;
-   }
-   nav ul li {
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
-   }
-   nav ul li a {
-    color: #fff;
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-transform: uppercase;
-   }
-   a.active ,a:hover{
-    background-color: #03EAF2;
-    transition: .5s;
-   }
-   .checkbtn{
-    font-size: 30px;
-    color: #fff;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
-   }
-   #check{
-    display: none;
-   }
-/*section1*/
-
-.section1{
+   header{
   width: 100%;
-  height: 765px;
+  height: 70px;
+  position: fixed;
+  top: 0;
   background-color: #222222;
+}
+header div{
+  float: left;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo{
+margin-left: 100px;
+padding: 20px;
+}
+.checkbtn{
+  display: none;
+  font-size: 30px;
+  color: rgba(0,0,0,0.9);
+  float: right;
+  line-height: 80px;
+  margin-right: 170px;
+}
+#check{
+  display: none;
+}
+header .nav{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 200px;
+}
+header .nav ul{
+  list-style: none;
+}
+header .nav ul li{
+  float: left;
+  padding-right: 40px;
+  padding-top: 10px;
+}
+header .nav ul li a {
+  text-decoration: none;
+  color: #03EAF2;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+}
+header .nav ul li a:hover{
+  color: rgb(132, 145, 255);
+}
+.section1{
+  background-color:#323846 ;
+  width: 100%;
+  height: 750px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
 }
-.section1 img{
-  width: 70%;
-  height: 100%;
-  
-  
+.haf1,.haf2{
+  width: 50%;
 }
-.section1 .pic{
-  width: 40%;
-  height: 500px;
-  align-items: center;
-  justify-content: center;
-  
-  
+.haf1{
+  margin-left: 230px;
+  margin-bottom: 120px;
 }
-.section1 .text{
- margin-left:70px; 
- margin-bottom: 200px;
- font-weight: 700;
+.haf2{
+  padding-right:160px ;
+  margin-top: 50px;
 }
-.section1 .text h3{
-  font-size: 25px;
+.haf2 img{
+  max-width: 100%;
+  height: auto;
 }
-.section1 .text h1{
-  font-size: 50px;
+.haf1 h3{
+font-weight: normal;
+color: #fff;
+}
+.haf1 h1 {
+  font-size: 60px;
   color: #03EAF2;
-  line-height: 15px;
 }
-.text .icon a{
- font-size: 30px;
- color: #03EAF2;
+.haf1 p{
+  color:#f9f9ff;
 }
-.text .icon a:hover{
-  color: #fff;
-  transition: .5s;
-  transform: scale(1.3);
+.haf1 input{
+  padding: 8px 20px;
+  background-color: rgb(132, 145, 255);
+  outline: none;
+  color: white;
+  border: 1px solid #8491ff;
+  font-size: 15px;
 }
-.text .cv{
- 
-  padding: 10px 26px;
-  background-color: rgb(3, 234, 242);
-  border-radius: 30px;
-  cursor: pointer;
+.meadia{
+   display: none;
 }
-.cv:hover{
-  box-shadow:2.5px 5px 15px rgb(3, 234, 242);
-    transition: all 0.5s ease-in 0.1s;
-    outline: none;
+.haf1 input:hover{
+  box-shadow: 5px 10px 30px  #8491ff;
+  transition: all 0.5s ease-in 0.1s;
+  outline: none;
 }
-.cv:active{
-  cursor: progress;
-}
+
 
 
 /*section2*/
@@ -332,52 +321,68 @@ button:hover{
   }
 
 @media (max-width:600px) {
-   label .logo{
-    font-size: 30px;
-    padding-left: 50px;
-   }
-   nav ul li a {
-    font-size: 16px;
-   }
-}
-@media (max-width:856px) {
-  .checkbtn{
-    display: block;
-  }
-  ul{
-    position: fixed;
+  header {
+        width: 100%;
+        height: auto;
+    }
+    header .logo{
+        margin-left:30px ;
+        padding: 20px;
+    }
+    h3{
+      padding-top: 80px;
+    }
+   
+
+
+ header .nav{
+        color: #03EAF2;
+        display:none ;
+}}
+@media(max-width:600px) {
+  .section1{
     width: 100%;
-    height: 100vh;
-    background-color: red;
-    top: 80px;
-    left: -100%;
-    text-align: center;
-    transition: all .5s;
-  }
-  nav ul li {
     display: block;
-    margin: 50px 0;
-    line-height: 30px;
+    height: auto;
+    align-items: center;
+  }
+  .haf1{
+    padding-top: 50px;
+    margin: auto;
+    padding: 0;
+  }
+  .haf1 h3{
+    font-size: 15px;
+  }
+  .haf1 h1{
+    font-size: 30px;
+  }
+  .haf2 img{
+    margin-left: 90px;
+    margin-top: 30px;
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 100px;
   }
   
-  nav ul li a{
-    font-size: 20px;
+  .meadia{
+    display: block;
+   
   }
-
-  a:hover,a.active{
-    background: none;
-    color: bisque;
+  .meadia ul {
+    display: flex;
   }
- #check:checked ~ ul{
-  left
- }
+  .meadia ul li {
+    padding: 10px 30px;
+    list-style: none;
+  }
+  .meadia ul li a{
+    text-decoration: none;
+    color: #03EAF2;
+  }
 
 }
-
-
-  
-      
-     
+/*
   @media (max-width:600px) {
     
   
@@ -414,7 +419,7 @@ button:hover{
       .text h3{
         line-height:1px;
         font-size: small;
-      } }
+      } }    */
       @media (max-width:600px) {
         body{
           display: flex;
@@ -463,9 +468,10 @@ button:hover{
   }
 
   .section3 .card{
-    flex-direction: column;
+    flex-direction:column;
     row-gap: 20px;
-    align-items: center; /* center করার জন্য */
+    align-items: center; 
+    justify-content: center;/* center করার জন্য */
   }
 
   .section3 .card .card1{
